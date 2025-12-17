@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Static Form Backend Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased">
+<!-- Sexy Navigation -->
+<header class="sticky top-0 z-50 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0 text-white font-extrabold text-2xl tracking-wide">
+        FabForm.io
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center space-x-6 text-white font-medium">
+        <a href="/pricing" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Pricing</a>
+        <a href="/blog" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Blog</a>
+      </nav>
+
+      <!-- Auth Buttons (Desktop) -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="https://app.fabform.io/login" 
+           class="px-5 py-2 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
+          Sign In
+        </a>
+        <a href="https://app.fabform.io/signup" 
+           class="px-5 py-2 rounded-lg bg-pink-500 text-white font-semibold shadow hover:bg-pink-600 transition">
+          Sign Up
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-6 pb-6">
+    <nav class="space-y-4 text-white font-medium">
+      <a href="#pricing" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Pricing</a>
+      <a href="#blog" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Blog</a>
+      <a href="https://app.fabform.io/login" 
+         class="block px-5 py-2 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
+        Sign In
+      </a>
+      <a href="https://app.fabform.io/signup" 
+         class="block px-5 py-2 rounded-lg bg-pink-500 text-white font-semibold shadow hover:bg-pink-600 transition">
+        Sign Up
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Simple toggle for mobile menu
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+	<!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-32 text-white">
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="relative max-w-5xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
+        The smart form backend service<br />for developers.
+      </h1>
+      <p class="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-indigo-100">
+        Use your own HTML form code. Submit to our endpoints. We'll handle the rest.
+      </p>
+      <div class="mt-12 flex justify-center">
+        <div class="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-2xl ring-4 ring-white/20">
+          <iframe 
+            src="https://snappify.com/embed/f0608f83-9bc6-4025-a368-7beaf828703b/b9fe93a8-ba4a-4b95-af4d-0ffbae4389ef?b=0" 
+            class="w-full h-full"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Why You Need a Form Backend -->
+<section class="bg-gradient-to-b from-slate-800 to-slate-900 py-24">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+      Why Do You Need a Form Backend?
+    </h2>
+    <p class="mt-6 max-w-3xl mx-auto text-lg text-slate-300">
+      Static websites are built with HTML, CSS, and JavaScript. They don’t run a server‑side language 
+      like PHP, Node.js, or Python. That means when someone fills out a form, there’s no backend to 
+      save the data, send emails, or trigger integrations.
+    </p>
+    <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-300">
+      FabForm solves this problem. Just point your form’s <code>action</code> to our endpoint, and we’ll 
+      handle submissions for you — storing data, sending notifications, and giving you a dashboard 
+      full of insights.
+    </p>
+
+    <div class="mt-16 grid md:grid-cols-3 gap-10 text-left">
+      <!-- Step 1 -->
+      <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+        <div class="flex items-center gap-3">
+          <!-- Icon: Form -->
+          <svg class="h-8 w-8 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <line x1="8" y1="8" x2="16" y2="8"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+            <line x1="8" y1="16" x2="12" y2="16"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-white">1. Add Your Form</h3>
+        </div>
+        <p class="mt-3 text-slate-200">Use a normal HTML form and set its <code>action</code> to FabForm.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+        <div class="flex items-center gap-3">
+          <!-- Icon: Submit -->
+          <svg class="h-8 w-8 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12l5 5L20 7"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-white">2. Submit Data</h3>
+        </div>
+        <p class="mt-3 text-slate-200">When users hit “Submit,” FabForm securely collects and processes the data.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+        <div class="flex items-center gap-3">
+          <!-- Icon: Dashboard -->
+          <svg class="h-8 w-8 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-white">3. Get Results</h3>
+        </div>
+        <p class="mt-3 text-slate-200">You receive notifications, can export entries, and view everything in your dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Getting Started Section -->
+<section class="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 py-24 text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+      Ready to Get Started?
+    </h2>
+    <p class="mt-6 text-lg text-indigo-100">
+      Create your FabForm account and start building forms today.
+    </p>
+    <a href="https://app.fabform.io/signup" 
+       class="mt-10 inline-block px-8 py-4 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
+      Sign Up
+    </a>
+  </div>
+</section>
+
+  <!-- Features Section -->
+  <section class="bg-gradient-to-b from-slate-800 to-slate-900 py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-extrabold text-center text-white">All the features developers love and need.</h2>
+      <p class="mt-6 max-w-3xl mx-auto text-center text-slate-300">
+        Fabform offers you all the best features you expect in a modern form backend service. 
+        We've thoughtfully crafted the best way to integrate powerful features into your form within minutes.
+      </p>
+
+      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- File Upload -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M16 12l-4-4-4 4m4-4v12"/>
+            </svg>
+            <h3 class="text-xl font-semibold">File Upload</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Upload files to your HTML forms with ease.</p>
+        </div>
+
+        <!-- Auto Responses -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
+            </svg>
+            <h3 class="text-xl font-semibold">Auto Responses</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Send customized auto‑responses with extensible templates.</p>
+        </div>
+
+        <!-- Email Notifications -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-18 8h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <h3 class="text-xl font-semibold">Email Notifications</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Get notified instantly when new submissions arrive.</p>
+        </div>
+
+        <!-- Webhooks -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5"/>
+            </svg>
+            <h3 class="text-xl font-semibold">Webhooks</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Send submission data in JSON to external endpoints automatically.</p>
+        </div>
+
+        <!-- Redirections -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M9 5l7 7-7 7"/>
+            </svg>
+            <h3 class="text-xl font-semibold">Redirections</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Redirect users to a Thank You page or custom URL after submission.</p>
+        </div>
+
+
+        <!-- Data Export -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 4v16m8-8H4"/>
+            </svg>
+            <h3 class="text-xl font-semibold">Data Export</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Export your form data to CSV for easy import into third‑party programs.</p>
+        </div>
+
+        <!-- Spam Protection -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+            <h3 class="text-xl font-semibold">Spam Protection</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Fabform keeps your inbox clean with built‑in spam rejection techniques.</p>
+        </div>
+
+        <!-- Captcha -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <h3 class="text-xl font-semibold">Captcha</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Add an optional captcha to ensure submissions are made by humans, not bots.</p>
+        </div>
+
+        <!-- Custom Email Templates -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+            </svg>
+            <h3 class="text-xl font-semibold">Custom Email Templates</h3>
+          </div>
+          <p class="mt-3 text-slate-200">Create personalized templates. Merge form field data into messages, e.g. Dear {firstName} …</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Reviews Section -->
+  <section class="bg-slate-900 py-24">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-extrabold text-white">Rocking reviews<br/>from our customers</h2>
+      <p class="mt-4 text-slate-300">Here is what our loyal customers have to say.</p>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-8">
+        <!-- Review Card 1 -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-6 shadow-lg hover:scale-105 transition-transform text-left">
+          <p class="text-slate-200 italic">
+            "I'm amazed by the quality of the features offered on the FabForm platform. I evaluated other Form Backend Services on the market and FabForm came out on top. The UI design feels better. It's feature rich, terrific pricing and it works a charm."
+          </p>
+          <div class="mt-4">
+            <div class="text-indigo-300 font-semibold">Sophia Martinez</div>
+            <div class="text-slate-400 text-sm">Frontend Engineer</div>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-6 shadow-lg hover:scale-105 transition-transform text-left">
+          <p class="text-slate-200 italic">
+            "As a full-time Digital Marketing professional, I needed a flexible and easy way to create and monitor various marketing HTML forms for some picky clients. FabForm has exceeded my expectations. It is -- in my humble opinion -- the best Form Backend out there bar none."
+          </p>
+          <div class="mt-4">
+            <div class="text-indigo-300 font-semibold">David Kim</div>
+            <div class="text-slate-400 text-sm">Digital Marketing Strategist</div>
+          </div>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div class="bg-white/10 backdrop-blur rounded-xl p-6 shadow-lg hover:scale-105 transition-transform text-left">
+          <p class="text-slate-200 italic">
+            "I'm using static website generators to build websites these days. FabForm is my favorite forms backend for handling forms on static websites. It's reliable and has all the features and ease of use a developer needs -- and then some."
+          </p>
+          <div class="mt-4">
+            <div class="text-indigo-300 font-semibold">Liam O’Connor</div>
+            <div class="text-slate-400 text-sm">Software Developer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-10">
+    <div class="max-w-6xl mx-auto px-6 text-center text-sm text-white">
+      &copy; <span id="year"></span> Fabform.io — Smart Form Backend
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
