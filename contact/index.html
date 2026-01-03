@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form With Tutorial</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-eUpUk2tYkw3NjxEftxVvm.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+
+
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="py-16">
+    <div class="max-w-2xl mx-auto bg-white shadow-xl rounded-xl p-10">
+      <h1 class="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
+
+      <form
+        action="https://fabform.io/f/JKOkjBT"
+        method="POST"
+        class="space-y-6"
+      >
+        <!-- Name -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Name</label>
+          <input
+            type="text"
+            name="name"
+            required
+            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-blue-600 focus:border-blue-600"
+          />
+        </div>
+
+        <!-- Subject -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Subject</label>
+          <input
+            type="text"
+            name="subject"
+            required
+            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-blue-600 focus:border-blue-600"
+          />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+          <textarea
+            name="message"
+            rows="6"
+            required
+            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-blue-600 focus:border-blue-600"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto py-12 px-6">
+
+    <h1 class="text-4xl font-bold mb-6">How to Add a Tailwind Contact Form Using Fabform (Full Single‑Page Tutorial)</h1>
+
+    <p class="mb-6">
+      This page contains a complete, self‑contained tutorial showing you exactly how to add a fully functional contact form to your website using <strong>Tailwind CSS</strong> and <strong>Fabform</strong>.  
+      Everything you need is included right here — no external links, no redirects, and no missing steps.
+    </p>
+
+    <h2 class="text-3xl font-semibold mt-10 mb-4">What Is Fabform?</h2>
+    <p class="mb-4">
+      Fabform is a form backend service that allows you to collect submissions from any HTML form without writing server‑side code.  
+      You simply point your form’s <code>action</code> attribute to your Fabform endpoint, and Fabform handles:
+    </p>
+
+    <ul class="list-disc pl-6 space-y-2">
+      <li>storing submissions</li>
+      <li>email notifications</li>
+      <li>spam filtering</li>
+      <li>redirects after submission</li>
+    </ul>
+
+    <p class="mt-4">
+      This makes it ideal for static sites, landing pages, Tailwind projects, and small business websites.
+    </p>
+
+    <h2 class="text-3xl font-semibold mt-10 mb-4">Step 1 — Create Your Fabform Endpoint</h2>
+    <p class="mb-4">
+      To receive submissions, you need a unique Fabform endpoint.  
+      When you create a form inside your Fabform dashboard, you will be given a URL that looks like this:
+    </p>
+
+    <pre class="bg-gray-900 text-gray-100 p-4 rounded text-sm overflow-x-auto">
+https://fabform.io/f/YOUR-FORM-ID
+    </pre>
+
+    <p class="mt-4">
+      Copy this URL — you will paste it into your Tailwind form in the next step.
+    </p>
+
+    <h2 class="text-3xl font-semibold mt-10 mb-4">Step 2 — Add Tailwind CSS to Your Page</h2>
+    <p class="mb-4">
+      If your site does not already use Tailwind, you can include it using the CDN version.  
+      This is the simplest way to get started and works perfectly for static sites.
+    </p>
+
+    <pre class="bg-gray-900 text-gray-100 p-4 rounded text-sm overflow-x-auto">
+&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+    </pre>
+
+    <h2 class="text-3xl font-semibold mt-10 mb-4">Step 3 — Add the Tailwind Contact Form</h2>
+    <p class="mb-6">
+      Below is a complete, production‑ready contact form styled with Tailwind.  
+      Replace <strong>YOUR-FORM-ID</strong> with your actual Fabform endpoint ID.
+    </p>
+
+    <pre class="bg-gray-900 text-gray-100 p-4 rounded text-sm overflow-x-auto">
+&lt;form action="https://fabform.io/f/YOUR-FORM-ID" method="POST" class="bg-white shadow-lg rounded-lg p-8 space-y-6"&gt;
+
+  &lt;h2 class="text-2xl font-semibold"&gt;Contact Us&lt;/h2&gt;
+
+  &lt;div&gt;
+    &lt;label class="block font-medium mb-1"&gt;Your Name&lt;/label&gt;
+    &lt;input type="text" name="name" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label class="block font-medium mb-1"&gt;Email Address&lt;/label&gt;
+    &lt;input type="email" name="email" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;label class="block font-medium mb-1"&gt;Message&lt;/label&gt;
+    &lt;textarea name="message" rows="5" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;button type="submit"
+    class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"&gt;
+    Send Message
+  &lt;/button&gt;
+
+&lt;/form&gt;
+    </pre>
+
+    <h2 class="text-3xl font-semibold mt-10 mb-4">Step 4 — Add Optional Success and Error Redirects</h2>
+    <p class="mb-4">
+      Fabform allows you to set custom redirect URLs for:
+    </p>
+
+    <ul class="list-disc pl-6 space-y-2">
+      <li>successful submissions</li>
+      <li>failed submissions</li>
+    </ul>
+
+    <p class="mt-4">
+      You configure these inside your Fabform dashboard.  
+      Once set, users will automatically be redirected after submitting the form.
+    </p>
+
+    <h2 class="text-3xl font-semibold mt-10 mb-4">Step 5 — Test Your Form</h2>
+    <p class="mb-4">
+      After adding the form to your website:
+    </p>
+
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Submit a test message.</li>
+      <li>Check your Fabform dashboard to confirm the submission.</li>
+      <li>Enable email notifications if you want instant alerts.</li>
+    </ul>
+
+    <h2 class="text-3xl font-semibold mt-10 mb-4">SEO Tips for Contact Form Pages</h2>
+    <p class="mb-4">
+      To help search engines understand your page and improve your ranking, consider:
+    </p>
+
+    <ul class="list-disc pl-6 space-y-2">
+      <li>adding a descriptive page title and meta description</li>
+      <li>including keywords like “Tailwind contact form”, “HTML form backend”, “Fabform integration”</li>
+      <li>writing a short introduction explaining what users can contact you about</li>
+      <li>adding structured data for business contact information</li>
+    </ul>
+
+    <h2 class="text-3xl font-semibold mt-10 mb-4">Complete Single‑Page Summary</h2>
+    <p class="mb-4">
+      This page now contains:
+    </p>
+
+    <ul class="list-disc pl-6 space-y-2">
+      <li>a full explanation of how Fabform works</li>
+      <li>a complete Tailwind contact form</li>
+      <li>setup instructions</li>
+      <li>SEO guidance</li>
+      <li>no external links except Tailwind CDN</li>
+    </ul>
+
+    <p class="mt-6 font-semibold">
+      If you want, I can also generate:
+    </p>
+
+    <ul class="list-disc pl-6 space-y-2">
+      <li>a premium, branded version of this form</li>
+      <li>a darker or more modern UI</li>
+      <li>a version with animations and validation</li>
+      <li>a full landing page that includes this tutorial</li>
+    </ul>
+
+  </section>
+
+</body>
+</html>
