@@ -3,42 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Form Tutorial</title>
+  <title>Contact Us — FabForm</title>
   <script src="https://cdn.tailwindcss.com"></script>
-<!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-eUpUk2tYkw3NjxEftxVvm.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
 
-
+  <!-- Plausible Analytics -->
+  <script async src="https://plausible.io/js/pa-eUpUk2tYkw3NjxEftxVvm.js"></script>
+  <script>
+    window.plausible = window.plausible || function(){(plausible.q = plausible.q || []).push(arguments)};
+  </script>
 </head>
+
 <body class="bg-slate-900 text-slate-100 antialiased">
-<!-- Sexy Navigation -->
+
+<!-- NAVIGATION -->
 <header class="sticky top-0 z-50 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 backdrop-blur">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex items-center justify-between h-16">
+
       <!-- Logo -->
-     <a href="/" class="flex-shrink-0 text-white font-extrabold text-2xl tracking-wide">
-  FabForm.io
-</a>
-` 
+      <a href="/" class="text-white font-extrabold text-2xl tracking-wide">
+        FabForm.io
+      </a>
 
       <!-- Desktop Menu -->
       <nav class="hidden md:flex items-center space-x-6 text-white font-medium">
         <a href="https://blog.fabform.io" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Blog</a>
         <a href="/pricing" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Pricing</a>
         <a href="https://docs.fabform.io" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Documentation</a>
-	
-        <a href="/contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact      Us</a>
+        <a href="/contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact</a>
       </nav>
 
-      <!-- Auth Buttons (Desktop) -->
+      <!-- Auth Buttons -->
       <div class="hidden md:flex items-center space-x-4">
         <a href="https://app.fabform.io/login" 
            class="px-5 py-2 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
-         Login 
+          Login
         </a>
         <a href="https://app.fabform.io/signup" 
            class="px-5 py-2 rounded-lg bg-pink-500 text-white font-semibold shadow hover:bg-pink-600 transition">
@@ -46,14 +45,12 @@
         </a>
       </div>
 
-      <!-- Mobile Hamburger -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none">
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
   </div>
 
@@ -62,10 +59,10 @@
     <nav class="space-y-4 text-white font-medium">
       <a href="https://blog.fabform.io" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Blog</a>
       <a href="/pricing" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Pricing</a>
-      <a href="/contact" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact                 Uss</a>
+      <a href="/contact" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact</a>
       <a href="https://app.fabform.io/login" 
          class="block px-5 py-2 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
-       Login
+        Login
       </a>
       <a href="https://app.fabform.io/signup" 
          class="block px-5 py-2 rounded-lg bg-pink-500 text-white font-semibold shadow hover:bg-pink-600 transition">
@@ -76,128 +73,80 @@
 </header>
 
 <script>
-  // Simple toggle for mobile menu
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
   });
 </script>
 
-<body class="bg-gray-100">
+<!-- CONTACT FORM -->
+<section class="py-20 px-6">
+  <div class="max-w-2xl mx-auto bg-white text-gray-900 shadow-2xl rounded-2xl p-10">
 
-  <!-- CONTACT FORM SECTION -->
-  <section class="py-16">
-    <div class="max-w-2xl mx-auto bg-white shadow-xl rounded-xl p-10">
-      <h1 class="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
+    <h1 class="text-4xl font-bold mb-6 text-center">Get in Touch</h1>
+    <p class="text-gray-600 text-center mb-10">
+      Have a question about FabForm? Want to collaborate?  
+      Send us a message and we’ll get back to you quickly.
+    </p>
 
-      <form
-        action="https://fabform.io/f/JKOkjBT"
-        method="POST"
-        class="space-y-6"
+    <form action="https://fabform.io/f/JKOkjBT" method="POST" class="space-y-6">
+
+      <!-- Name -->
+      <div>
+        <label class="block text-sm font-semibold mb-1">Name</label>
+        <input
+          type="text"
+          name="name"
+          required
+          placeholder="Your name"
+          class="w-full border border-gray-300 rounded-lg p-3 text-black bg-gray-50 focus:ring-blue-600 focus:border-blue-600"
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm font-semibold mb-1">Email</label>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          class="w-full border border-gray-300 rounded-lg p-3 text-black bg-gray-50 focus:ring-blue-600 focus:border-blue-600"
+        />
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label class="block text-sm font-semibold mb-1">Message</label>
+        <textarea
+          name="message"
+          rows="6"
+          required
+          placeholder="How can we help?"
+          class="w-full border border-gray-300 rounded-lg p-3 text-black bg-gray-50 focus:ring-blue-600 focus:border-blue-600"
+        ></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
       >
-        <!-- Name -->
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">Name</label>
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Tell us your name "
-            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-blue-600 focus:border-blue-600"
-          />
-        </div>
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
 
-        <!-- Email -->
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
-          <input
-            type="email"
-            name="Email"
-            required
-            placeholder="Where can we reach you?"
-            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-blue-600 focus:border-blue-600"
-          />
-        </div>
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-10">
+  <div class="max-w-6xl mx-auto px-6 text-center text-sm text-white">
+    &copy; <span id="year"></span> FabForm.io — Form Backend Service for Static WebSites 
+  </div>
+</footer>
 
-        <!-- Message -->
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-1">Message</label>
-          <textarea
-            name="message"
-            rows="6"
-            required
-            placeholder="How can we help? Write your message here..."
-            class="w-full border border-gray-300 rounded-lg p-3 focus:ring-blue-600 focus:border-blue-600"
-          ></textarea>
-        </div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
 
-        <!-- Submit -->
-        <button
-          type="submit"
-          class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <section class="max-w-4xl mx-auto py-12 px-6">
-
-    <h1 class="text-4xl font-bold mb-6">How to Add a Tailwind Contact Form Using Fabform (Full Single‑Page Tutorial)</h1>
-
-    <p class="mb-6">
-      This page contains a complete, self‑contained tutorial showing you exactly how to add a fully functional contact form to your website using <strong>Tailwind CSS</strong> and <strong>Fabform</strong>.  
-      Everything you need is included right here — no external links, no redirects, and no missing steps.
-    </p>
-
-    <h2 class="text-3xl font-semibold mt-10 mb-4">What Is Fabform?</h2>
-    <p class="mb-4">
-      Fabform is a form backend service that allows you to collect submissions from any HTML form without writing server‑side code.  
-      You simply point your form’s <code>action</code> attribute to your Fabform endpoint, and Fabform handles:
-    </p>
-
-    <ul class="list-disc pl-6 space-y-2">
-      <li>storing submissions</li>
-      <li>email notifications</li>
-      <li>spam filtering</li>
-      <li>redirects after submission</li>
-    </ul>
-
-    <p class="mt-4">
-      This makes it ideal for static sites, landing pages, Tailwind projects, and small business websites.
-    </p>
-
-    <h2 class="text-3xl font-semibold mt-10 mb-4">Step 1 — Create Your Fabform Endpoint</h2>
-    <p class="mb-4">
-      To receive submissions, you need a unique Fabform endpoint.  
-      When you create a form inside your Fabform dashboard, you will be given a URL that looks like this:
-    </p>
-
-    <pre class="bg-gray-900 text-gray-100 p-4 rounded text-sm overflow-x-auto">
-https://fabform.io/f/YOUR-FORM-ID
-    </pre>
-
-    <p class="mt-4">
-      Copy this URL — you will paste it into your Tailwind form in the next step.
-    </p>
-
-    <h2 class="text-3xl font-semibold mt-10 mb-4">Step 2 — Add Tailwind CSS to Your Page</h2>
-    <p class="mb-4">
-      If your site does not already use Tailwind, you can include it using the CDN version.  
-      This is the simplest way to get started and works perfectly for static sites.
-    </p>
-
-    <pre class="bg-gray-900 text-gray-100 p-4 rounded text-sm overflow-x-auto">
-&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
-    </pre>
-
-    <h2 class="text-3xl font-semibold mt-10 mb-4">Step 3 — Add the Tailwind Contact Form</h2>
-    <p class="mb-6">
-      Below is a complete, production‑ready contact form styled with Tailwind.  
-      Replace <strong>YOUR-FORM-ID</strong> with your actual Fabform endpoint ID.
-    </p>
-
-    <pre class="bg-gray-900 text-gray-100 p-4 rounded text-sm overflow-x-auto">
-&lt;form action

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>FabForm.io – Smart Form Backend for Static Websites & Developers</title>
-  <meta name="description" content="FabForm.io is a smart form backend for static websites and developers. Works with HTML forms and static site generators like Astro, Eleventy, Hugo, and Jekyll. Collect submissions securely, send email notifications, auto-responses, webhooks, and view everything in your dashboard.">
-  <meta name="keywords" content="form backend, static websites, HTML forms, SSG, Astro, Eleventy, Hugo, Jekyll, form submissions, email notifications, auto-responses, webhooks, dashboard analytics">
+  <title>Smart Form Backend for Static Websites & Developers</title>
+  <meta name="description" content="FabForm.io is a smart form backend for static websites and developers. Works with HTML forms and static site generators like Astro, Eleventy, Hugo, and Jekyll. Collect submissions securely, send email notifications, Telegram notifications, auto-responses, webhooks, and view everything in your dashboard.">
+  <meta name="keywords" content="form backend, static websites, HTML forms, SSG, Astro, Eleventy, Hugo, Jekyll, form submissions, email notifications, Telegram notifications, auto-responses, webhooks, dashboard analytics">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fabform.io">
 
@@ -29,9 +29,9 @@
     "name": "FabForm.io",
     "url": "https://fabform.io",
     "applicationCategory": "DeveloperTool",
-    "description": "FabForm.io is a smart form backend for static websites and developers. Works with HTML forms and static site generators like Astro, Eleventy, Hugo, and Jekyll. Secure submissions, email notifications, auto-responses, webhooks, and dashboard analytics.",
+    "description": "FabForm.io is a smart form backend for static websites and developers. Works with HTML forms and static site generators like Astro, Eleventy, Hugo, and Jekyll. Secure submissions, email notifications, Telegram notifications, auto-responses, webhooks, and dashboard analytics.",
     "operatingSystem": "Web",
-    "keywords": "form backend, static websites, HTML forms, SSG, Astro, Eleventy, Hugo, Jekyll, form submissions, email notifications, auto-responses, webhooks"
+    "keywords": "form backend, static websites, HTML forms, SSG, Astro, Eleventy, Hugo, Jekyll, form submissions, email notifications, Telegram notifications, auto-responses, webhooks"
   }
   </script>
 </head>
@@ -107,7 +107,7 @@
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-4xl md:text-5xl font-extrabold text-white">Why Do You Need a Form Backend?</h2>
     <p class="mt-6 max-w-3xl mx-auto text-lg text-slate-300">
-      Static websites and SSGs like Astro or Eleventy don’t run server-side code. That means HTML forms cannot submit data directly. FabForm.io solves this problem: just point your form’s <code>action</code> to our endpoint, and we’ll handle submissions, store data securely, send email notifications and auto-responses, trigger webhooks, and provide a dashboard full of analytics.
+      Static websites and SSGs like Astro or Eleventy don’t run server-side code. That means HTML forms cannot submit data directly. FabForm.io solves this problem: just point your form’s <code>action</code> to our endpoint, and we’ll handle submissions, store data securely, send email notifications, Telegram notifications, auto-responses, trigger webhooks, and provide a dashboard full of analytics.
     </p>
 
     <div class="mt-16 grid md:grid-cols-3 gap-10 text-left">
@@ -193,6 +193,18 @@
           <h3 class="text-xl font-semibold">Email Notifications</h3>
         </div>
         <p class="mt-3 text-slate-200">Get notified instantly when new submissions arrive.</p>
+      </div>
+
+      <!-- Telegram Notifications -->
+      <div class="bg-white/10 backdrop-blur rounded-xl p-8 shadow-lg hover:scale-105 transition-transform">
+        <div class="flex items-center gap-3">
+          <!-- Telegram SVG icon -->
+          <svg class="h-8 w-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.5 2.5L1 10.5l5 2 2 5 2-5 10-5z"/>
+          </svg>
+          <h3 class="text-xl font-semibold">Telegram Notifications</h3>
+        </div>
+        <p class="mt-3 text-slate-200">Receive form submission alerts directly via Telegram.</p>
       </div>
 
       <!-- Webhooks -->
@@ -312,7 +324,7 @@
 <!-- Footer -->
 <footer class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-10">
   <div class="max-w-6xl mx-auto px-6 text-center text-sm text-white">
-    &copy; <span id="year"></span> FabForm.io — Smart Form Backend for Static Sites & Developers
+    &copy; <span id="year"></span> FabForm.io — Form Backend Service for Static WebSites 
   </div>
 </footer>
 
@@ -321,4 +333,3 @@
 </script>
 </body>
 </html>
-
