@@ -3,38 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fabform Pricing</title>
+  <title>FabForm Pricing — Lifetime Access</title>
   <script src="https://cdn.tailwindcss.com"></script>
-<!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-eUpUk2tYkw3NjxEftxVvm.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
 
-
+  <!-- Plausible Analytics -->
+  <script async src="https://plausible.io/js/pa-eUpUk2tYkw3NjxEftxVvm.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased">
-<!-- Sexy Navigation -->
-<header class="sticky top-0 z-50 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 backdrop-blur">
+
+<body class="bg-slate-950 text-white antialiased">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-gradient-to-r from-indigo-700/95 via-purple-700/95 to-pink-700/95 backdrop-blur border-b border-white/10">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-     <a href="/" class="flex-shrink-0 text-white font-extrabold text-2xl tracking-wide">
-  FabForm.io
-</a>
-` 
+      <a href="/" class="flex items-center gap-2 flex-shrink-0 text-white font-extrabold text-2xl tracking-wide">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white text-indigo-700 font-black text-lg shadow-md">F</span>
+        <span>FabForm.io</span>
+      </a>
 
-      <!-- Desktop Menu -->
       <nav class="hidden md:flex items-center space-x-6 text-white font-medium">
         <a href="https://blog.fabform.io" class="px-2 py-2 rounded-lg hover:bg-white/10 transition">Blog</a>
-        <a href="/pricing" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Pricing</a>
+        <a href="/pricing" class="px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition">Pricing</a>
         <a href="https://docs.fabform.io" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Documentation</a>
-	
-        <a href="/contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact      Us</a>
+        <a href="/contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact Us</a>
       </nav>
 
-      <!-- Auth Buttons (Desktop) -->
       <div class="hidden md:flex items-center space-x-4">
         <a href="https://app.fabform.io/login" 
            class="px-5 py-2 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
@@ -46,7 +43,6 @@
         </a>
       </div>
 
-      <!-- Mobile Hamburger -->
       <div class="md:hidden">
         <button id="menu-toggle" class="text-white focus:outline-none">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -57,12 +53,11 @@
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-6 pb-6">
+  <div id="mobile-menu" class="hidden md:hidden bg-slate-950 px-6 pb-6 border-t border-white/10">
     <nav class="space-y-4 text-white font-medium">
-      <a href="https://blog.fabform.io" class="px-2 py-2 rounded-lg hover:bg-white/10 transition">Blog</a>
-      <a href="/pricing" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Pricing</a>
-      <a href="/contact" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact                 Uss</a>
+      <a href="https://blog.fabform.io" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Blog</a>
+      <a href="/pricing" class="block px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition">Pricing</a>
+      <a href="/contact" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact Us</a>
       <a href="https://app.fabform.io/login" 
          class="block px-5 py-2 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
        Login
@@ -76,87 +71,385 @@
 </header>
 
 <script>
-  // Simple toggle for mobile menu
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  }
 </script>
-<body class="bg-slate-900 text-white">
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 py-24 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-        Hooray! No monthly plans.<br/>
-        Pay once, enjoy forever. Yeah baby!
-      </h1>
-      <p class="mt-6 text-lg text-indigo-100">
-        Choose the plan that fits your needs. Simple pricing, no hidden fees.
+<!-- HERO -->
+<section class="relative overflow-hidden bg-gradient-to-br from-indigo-700 via-purple-700 to-pink-700 py-24 text-center">
+  <div class="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top,_#ffffff33,_transparent_60%)] pointer-events-none"></div>
+  <div class="max-w-4xl mx-auto px-6 relative">
+    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-black/20 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-100 mb-6">
+      Lifetime Deal · No Subscription · Indie‑Friendly
+    </p>
+    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-sm">
+      Stop Paying Monthly for Form Backends.<br/>
+      <span class="text-yellow-200">Own FabForm Forever.</span>
+    </h1>
+    <p class="mt-6 text-lg text-indigo-100 max-w-2xl mx-auto">
+      Turn any static website into a powerful form backend in 60 seconds — no servers, no subscriptions, no stress.
+    </p>
+    <p class="mt-3 text-sm text-indigo-100/80">
+      Lifetime access. One tiny payment. Unlimited forms and submissions.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://buy.stripe.com/00w4gy7qm6wI5Jm4NLa7C0d"
+         class="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-white text-indigo-700 font-bold text-lg shadow-lg shadow-black/30 hover:bg-indigo-50 active:scale-95 transition">
+        Get Lifetime Access — £29
+        <span class="inline-flex items-center justify-center text-xs font-semibold px-2 py-1 rounded-full bg-indigo-100 text-indigo-700">
+          Early‑bird pricing
+        </span>
+      </a>
+      <a href="#pricing"
+         class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/40 text-white font-medium hover:bg-white/10 transition">
+        View Plans
+      </a>
+    </div>
+    <p class="mt-3 text-xs text-indigo-100/80">
+      Secure Stripe checkout. No subscription. No hidden fees. Price increases soon.
+    </p>
+  </div>
+</section>
+
+<!-- WHY SO CHEAP -->
+<section class="py-16 bg-slate-950 text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-extrabold mb-6">Why Is This So Cheap?</h2>
+    <p class="text-slate-300 max-w-2xl mx-auto">
+      Other form services charge <span class="font-semibold text-white">£25–£35 every month</span>.
+      That’s £300–£400 a year — just to handle basic form submissions.
+    </p>
+    <p class="text-slate-300 max-w-2xl mx-auto mt-4">
+      FabForm is different. No investors. No bloated team. No “growth at all costs”.
+      Just a fast, reliable form backend priced the way it should be:
+      <span class="font-semibold text-pink-400">£29 once. Lifetime access.</span>
+    </p>
+    <p class="mt-6 text-slate-400 italic">
+      You’re not renting your tools anymore. You own them.
+    </p>
+  </div>
+</section>
+
+<!-- INSANE VALUE / SAVINGS -->
+<section class="py-20 bg-slate-900 text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold mb-6">This Pricing Is Actually Insane</h2>
+    <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+      If you’re paying £30/month elsewhere, that’s £360 every year.
+      FabForm gives you the same power — and more — for <span class="font-bold text-pink-400">£29 for life</span>.
+    </p>
+    <p class="mt-4 text-slate-300">
+      Every month you don’t switch, you’re literally burning money.
+    </p>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-6 text-left md:text-center">
+      <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+        <h3 class="text-xl font-bold mb-2">Competitors</h3>
+        <p class="text-slate-300">£25–£35 per month</p>
+        <p class="text-slate-400 text-sm mt-2">£300–£400 per year</p>
+      </div>
+
+      <div class="bg-white/10 p-6 rounded-2xl border-2 border-pink-500 shadow-lg shadow-pink-500/30">
+        <h3 class="text-xl font-bold mb-2">FabForm</h3>
+        <p class="text-pink-400 font-extrabold text-3xl">£29</p>
+        <p class="text-slate-300">One‑time payment</p>
+        <p class="text-slate-400 text-sm mt-2">Lifetime access</p>
+      </div>
+
+      <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+        <h3 class="text-xl font-bold mb-2">Your Savings</h3>
+        <p class="text-slate-300">£300+ saved every year</p>
+        <p class="text-slate-400 text-sm mt-2">Forever.</p>
+      </div>
+    </div>
+
+    <a href="https://buy.stripe.com/00w4gy7qm6wI5Jm4NLa7C0d"
+       class="mt-10 inline-flex items-center justify-center px-10 py-4 rounded-xl bg-pink-500 text-white font-semibold text-lg shadow-lg shadow-pink-500/40 hover:bg-pink-600 active:scale-95 transition">
+      Lock In Lifetime Access — £29
+    </a>
+    <p class="mt-3 text-xs text-slate-400">
+      Lifetime deal. Limited availability. Price increases as we add more features.
+    </p>
+  </div>
+</section>
+
+<!-- FOUNDER MESSAGE (IRELAND) -->
+<section class="py-20 bg-slate-950 text-white">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">From the Founder</h2>
+    <p class="text-slate-300 leading-relaxed">
+      I’m <span class="font-semibold text-white">Geoffrey Callaghan</span>, a developer from Ireland.
+      I built FabForm because I was sick of paying £30 every month for a simple form backend.
+      It felt ridiculous — and honestly, unfair.
+    </p>
+    <p class="text-slate-300 leading-relaxed mt-4">
+      So I made FabForm a one‑time payment. No subscriptions. No hidden fees. No limits.
+      You pay £29 once, and you own it forever.
+    </p>
+    <p class="text-slate-300 leading-relaxed mt-4">
+      If you’ve ever felt punished by monthly SaaS pricing, this is your chance to break free.
+      Lock in lifetime access now — before the price goes up.
+    </p>
+    <p class="mt-6 text-slate-400 italic">— Geoffrey Callaghan</p>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR / NOT FOR -->
+<section class="py-20 bg-slate-900 text-white">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+    <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+      <h2 class="text-2xl font-bold mb-4">FabForm Is Perfect For</h2>
+      <ul class="space-y-2 text-slate-200 text-sm">
+        <li>✔ Indie developers</li>
+        <li>✔ Freelancers</li>
+        <li>✔ Agencies</li>
+        <li>✔ Static site builders (Astro, Hugo, Jekyll, 11ty…)</li>
+        <li>✔ Landing pages & marketing sites</li>
+        <li>✔ Portfolio sites & contact forms</li>
+        <li>✔ Hackathon projects & MVPs</li>
+      </ul>
+    </div>
+    <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+      <h2 class="text-2xl font-bold mb-4">FabForm Is NOT For</h2>
+      <ul class="space-y-2 text-slate-200 text-sm">
+        <li>✘ People who want a full CRM</li>
+        <li>✘ Enterprise workflow monsters</li>
+        <li>✘ Teams who love paying £30/month for no reason</li>
+        <li>✘ People who enjoy over‑engineering simple forms</li>
+      </ul>
+      <p class="mt-4 text-slate-400 text-xs">
+        If you just want a clean, powerful, affordable form backend that “just works” — you’re in the right place.
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Pricing Section -->
-  <section class="py-24">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
-      
-      <!-- Free Plan -->
-      <div class="bg-white/10 backdrop-blur rounded-2xl shadow-lg p-8 hover:scale-105 transition-transform text-left">
-        <h3 class="text-3xl font-bold text-white">$0 <span class="text-slate-400 text-lg">Free</span></h3>
-        <p class="mt-2 text-slate-300">For light personal use</p>
-        <ul class="mt-6 space-y-3 text-slate-200">
-          <li>✔ 1 Form</li>
-          <li>✔ 50 Submissions / Month</li>
-          <li>✔ Customize Thank You page</li>
-          <li>✔ Auto-responses</li>
+<!-- FEATURE GRID -->
+<section class="py-24 bg-slate-950 text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Everything You Get With FabForm</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 text-sm leading-relaxed">
+
+      <!-- Core -->
+      <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+        <h3 class="text-xl font-semibold mb-4">Core Form Features</h3>
+        <ul class="space-y-2 text-slate-200">
+          <li>✔ Unlimited Forms</li>
+          <li>✔ Unlimited Submissions</li>
+          <li>✔ Unlimited Fields</li>
+          <li>✔ Works with any static site</li>
+          <li>✔ Works with React, Vue, Svelte, Next.js, etc.</li>
+          <li>✔ Custom Thank You pages</li>
+          <li>✔ Custom Redirects</li>
+          <li>✔ Auto‑responses (with variables)</li>
+          <li>✔ File uploads (1 GB included)</li>
+          <li>✔ Hidden fields & metadata</li>
+          <li>✔ Multi‑page forms</li>
         </ul>
-        <a href="https://app.fabform.io/signup" 
-           class="mt-8 inline-block w-full text-center px-5 py-3 rounded-lg bg-indigo-500 text-white font-semibold shadow hover:bg-indigo-600 transition">
-          Get Started
-        </a>
       </div>
 
-      <!-- Professional Plan -->
-      <div class="bg-white/10 backdrop-blur rounded-2xl shadow-lg p-8 hover:scale-105 transition-transform text-left border-2 border-pink-500 relative">
-        <!-- Badge -->
-        <span class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-          Most Popular
-        </span>
-        <h3 class="text-3xl font-bold text-white">$59 <span class="text-slate-400 text-lg">One-time payment</span></h3>
-        <p class="mt-2 text-slate-300">Professional use — access forever</p>
-        <ul class="mt-6 space-y-3 text-slate-200">
-          <li>✔ Unlimited Forms</li>
-          <li>✔ Unlimited Submissions / Month</li>
-          <li>✔ Customize Thank You page</li>
-          <li>✔ Auto-responses</li>
-          <li>✔ Export your data</li>
-          <li>✔ Custom redirects</li>
-          <li>✔ Receive email with submissions</li>
-          <li>✔ Webhook integration</li>
-          <li>✔ Spam protection</li>
-          <li>✔ File uploads (1 GB)</li>
-          <li>✔ API access</li>
-          <li>✔ Google Sheets integration</li>
+      <!-- Submissions & DX -->
+      <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+        <h3 class="text-xl font-semibold mb-4">Submissions & Developer Experience</h3>
+        <ul class="space-y-2 text-slate-200">
+          <li>✔ Email notifications</li>
+          <li>✔ Multiple recipients</li>
+          <li>✔ Custom email templates</li>
+          <li>✔ Attach files to emails</li>
+          <li>✔ Export submissions (CSV, JSON)</li>
+          <li>✔ Search & filter submissions</li>
+          <li>✔ Tag, archive, delete, mark as read</li>
+          <li>✔ Clean, fast dashboard</li>
+          <li>✔ Copy‑paste HTML snippets</li>
+          <li>✔ Code examples for popular frameworks</li>
+          <li>✔ Dark mode (dev‑friendly)</li>
         </ul>
-        <a href="https://buy.stripe.com/cN24hWaHzadp0jCbIS" 
-           class="mt-8 inline-block w-full text-center px-5 py-3 rounded-lg bg-pink-500 text-white font-semibold shadow hover:bg-pink-600 transition">
-          Buy Now
-        </a>
+      </div>
+
+      <!-- Integrations & Security -->
+      <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+        <h3 class="text-xl font-semibold mb-4">Integrations, Security & Power</h3>
+        <ul class="space-y-2 text-slate-200">
+          <li>✔ Webhooks</li>
+          <li>✔ Google Sheets integration</li>
+          <li>✔ Zapier / Make / n8n compatible</li>
+          <li>✔ Slack, Discord, Telegram notifications</li>
+          <li>✔ REST API access</li>
+          <li>✔ Built‑in spam protection</li>
+          <li>✔ Honeypot fields</li>
+          <li>✔ Rate limiting & IP blocking</li>
+          <li>✔ File type & size restrictions</li>
+          <li>✔ HTTPS enforced</li>
+          <li>✔ GDPR‑friendly</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="mt-8 text-center text-slate-400 text-sm">
+      All of this — for a one‑time £29. No subscriptions. No usage caps. Lifetime updates included.
+    </p>
+  </div>
+</section>
+
+<!-- URGENCY ABOVE PRICING -->
+<section class="py-10 bg-slate-900 text-center text-white">
+  <h2 class="text-3xl font-extrabold mb-4">Lifetime Deal Ending Soon</h2>
+  <p class="text-slate-300 max-w-2xl mx-auto">
+    £29 is early‑bird pricing. As we add more features, the price will increase.
+    Lock in lifetime access now — once this deal is gone, it’s gone.
+  </p>
+</section>
+
+<!-- PRICING CARDS -->
+<section id="pricing" class="py-24 bg-slate-900 text-white">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+
+    <!-- Free Plan -->
+    <div class="bg-white/5 backdrop-blur rounded-2xl shadow-lg shadow-black/40 p-8 hover:scale-[1.02] hover:shadow-xl transition-transform">
+      <h3 class="text-3xl font-bold">£0 <span class="text-slate-400 text-lg">Free Forever</span></h3>
+      <p class="mt-2 text-slate-300">Perfect for testing and small personal projects.</p>
+      <ul class="mt-6 space-y-3 text-slate-200 text-sm">
+        <li>✔ 1 Form</li>
+        <li>✔ 50 Submissions / Month</li>
+        <li>✔ Custom Thank You Page</li>
+        <li>✔ Auto‑responses</li>
+      </ul>
+      <a href="https://app.fabform.io/signup"
+         class="mt-8 inline-block w-full text-center px-5 py-3 rounded-lg bg-indigo-500 text-white font-semibold shadow hover:bg-indigo-600 active:scale-95 transition">
+        Start Free
+      </a>
+      <p class="mt-3 text-xs text-slate-400 text-center">
+        Try FabForm with zero risk. Upgrade to lifetime anytime.
+      </p>
+    </div>
+
+    <!-- Pro / Lifetime Plan -->
+    <div class="relative bg-white/10 backdrop-blur rounded-2xl shadow-xl shadow-pink-500/40 p-8 hover:scale-[1.03] transition-transform border-2 border-pink-500">
+      <span class="absolute -top-4 left-6 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+        Lifetime Deal
+      </span>
+      <h3 class="text-3xl font-bold mt-2">£29 <span class="text-slate-400 text-lg">Lifetime Access</span></h3>
+      <p class="mt-2 text-slate-300">Unlimited forms. Unlimited submissions. Yours forever.</p>
+      <ul class="mt-6 space-y-3 text-slate-200 text-sm">
+        <li>✔ Unlimited Forms</li>
+        <li>✔ Unlimited Submissions</li>
+        <li>✔ File Uploads (1 GB)</li>
+        <li>✔ Auto‑responses</li>
+        <li>✔ Custom Redirects</li>
+        <li>✔ Email Notifications</li>
+        <li>✔ Webhooks</li>
+        <li>✔ Google Sheets Integration</li>
+        <li>✔ API Access</li>
+        <li>✔ Spam Protection</li>
+        <li>✔ Export Data</li>
+        <li>✔ Multi‑domain Support</li>
+        <li>✔ Lifetime Updates</li>
+      </ul>
+      <a href="https://buy.stripe.com/00w4gy7qm6wI5Jm4NLa7C0d"
+         class="mt-8 inline-block w-full text-center px-5 py-3 rounded-lg bg-pink-500 text-white font-semibold shadow-lg shadow-pink-500/40 hover:bg-pink-600 active:scale-95 transition">
+        Get Lifetime Access — £29
+      </a>
+      <p class="text-xs text-slate-300 mt-3 text-center">
+        30‑day money‑back guarantee. No questions asked.
+      </p>
+      <p class="text-xs text-slate-400 mt-1 text-center">
+        Early‑bird lifetime pricing. Price increases soon.
+      </p>
+      <p class="text-xs text-slate-500 mt-1 text-center">
+        Only a limited number of lifetime licenses will be sold at this price.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-20 bg-slate-950 text-white">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10">How FabForm Works</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+        <div class="text-4xl mb-4">1️⃣</div>
+        <h3 class="font-bold text-xl mb-2">Create an Endpoint</h3>
+        <p class="text-slate-300 text-sm">Generate a form endpoint in your FabForm dashboard.</p>
+      </div>
+
+      <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+        <div class="text-4xl mb-4">2️⃣</div>
+        <h3 class="font-bold text-xl mb-2">Paste Into Your HTML</h3>
+        <p class="text-slate-300 text-sm">Replace your form action with your FabForm URL. That’s it.</p>
+      </div>
+
+      <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+        <div class="text-4xl mb-4">3️⃣</div>
+        <h3 class="font-bold text-xl mb-2">Receive Submissions</h3>
+        <p class="text-slate-300 text-sm">View them in your dashboard, send emails, trigger automations.</p>
       </div>
     </div>
-  </section>
-<!-- Footer -->
-<footer class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-10">
-  <div class="max-w-6xl mx-auto px-6 text-center text-sm text-white">
-    &copy; <span id="year"></span> FabForm.io — Form Backend Service for Static WebSites 
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="py-20 bg-slate-900 text-white">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10">Loved by Developers</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+        <p class="text-slate-300 text-sm">“Set it up in minutes. Perfect for static sites and landing pages.”</p>
+        <p class="mt-3 text-xs text-slate-400">— Alex, Indie Hacker</p>
+      </div>
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+        <p class="text-slate-300 text-sm">“The lifetime deal is a no‑brainer. I’d happily pay more.”</p>
+        <p class="mt-3 text-xs text-slate-400">— Priya, Freelancer</p>
+      </div>
+      <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+        <p class="text-slate-300 text-sm">“Finally, a form backend that doesn’t bleed you monthly.”</p>
+        <p class="mt-3 text-xs text-slate-400">— Marco, Agency Owner</p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-slate-400 text-sm">
+      Join developers who are done paying subscriptions for simple forms.
+    </p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-20 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 text-center text-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold mb-6">Ready to Stop Paying Monthly?</h2>
+    <p class="text-lg text-indigo-100 mb-8 max-w-2xl mx-auto">
+      One payment. Lifetime access. Unlimited forms and submissions.
+      No subscriptions. No surprises. No regrets.
+    </p>
+    <a href="https://buy.stripe.com/00w4gy7qm6wI5Jm4NLa7C0d"
+       class="inline-flex items-center justify-center px-10 py-4 rounded-xl bg-white text-indigo-700 font-bold text-xl shadow-lg shadow-black/30 hover:bg-indigo-100 active:scale-95 transition">
+      Get Lifetime Access — £29
+    </a>
+    <p class="mt-3 text-xs text-indigo-100/80">
+      30‑day money‑back guarantee. Lifetime deal. Limited availability. Price increases soon.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-950 border-t border-white/10 py-8">
+  <div class="max-w-6xl mx-auto px-6 text-center text-sm text-slate-400">
+    &copy; <span id="year"></span> FabForm.io — Form Backend Service for Static Websites
   </div>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
 
