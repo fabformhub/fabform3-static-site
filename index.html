@@ -13,6 +13,7 @@
 
   <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css">
 
   <!-- Privacy-friendly analytics by Plausible -->
   <script async src="https://plausible.io/js/pa-eUpUk2tYkw3NjxEftxVvm.js"></script>
@@ -87,20 +88,96 @@
 <!-- Hero Section -->
 <section class="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-32 text-white">
   <div class="absolute inset-0 bg-black/30"></div>
+
   <div class="relative max-w-5xl mx-auto px-6 text-center">
     <h1 class="text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
       Smart Form Backend for Static Websites & Developers
     </h1>
+
     <p class="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-indigo-100">
-      FabForm.io works with HTML forms and static site generators like Astro, Eleventy, Hugo, and Jekyll. Collect submissions securely, send notifications, auto-responses, webhooks, and manage everything in a powerful dashboard — all without needing a backend server.
+      FabForm.io works with HTML forms and static site generators like Astro, Eleventy, Hugo, and Jekyll.
     </p>
-    <div class="mt-12 flex justify-center">
-      <div class="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-2xl ring-4 ring-white/20">
-        <iframe src="https://snappify.com/embed/f0608f83-9bc6-4025-a368-7beaf828703b/b9fe93a8-ba4a-4b95-af4d-0ffbae4389ef?b=0" class="w-full h-full" allowfullscreen title="FabForm.io demo of HTML form integration"></iframe>
+
+    <!-- Code Window -->
+    <div class="mt-12 w-full max-w-3xl mx-auto relative">
+      <button 
+        id="copyBtn"
+        class="absolute top-3 right-3 flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-sm px-3 py-1.5 rounded-md border border-gray-700 transition z-10"
+      >
+        <span id="copyIcon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+        </span>
+        <span id="copyText">Copy</span>
+      </button>
+
+      <div 
+        id="copyTooltip"
+        class="absolute top-12 right-3 bg-black text-white text-xs px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity z-10"
+      >
+        Copied!
+      </div>
+
+      <div class="bg-gray-900 text-gray-100 p-6 rounded-xl shadow-2xl ring-4 ring-white/20 w-full max-w-full">
+        <!-- HARD FORCED MOBILE SIZE -->
+        <pre class="language-html text-[10px] md:text-sm leading-relaxed whitespace-pre-wrap break-words">
+<code id="codeBlock">
+&lt;form action="https://fabform.io/f/xxxxx" method="post"&gt;
+  &lt;label for="firstName"&gt;First Name&lt;/label&gt;
+  &lt;input name="firstName" type="text" required&gt;
+
+  &lt;label for="lastName"&gt;Last Name&lt;/label&gt;
+  &lt;input name="lastName" type="text" required&gt;
+
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input name="email" type="email" required&gt;
+
+  &lt;label for="files"&gt;Choose files:&lt;/label&gt;
+  &lt;input type="file" name="files" multiple required /&gt;
+
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+</code>
+        </pre>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const copyBtn = document.getElementById("copyBtn");
+  const copyText = document.getElementById("copyText");
+  const copyIcon = document.getElementById("copyIcon");
+  const tooltip = document.getElementById("copyTooltip");
+  const codeBlock = document.getElementById("codeBlock").innerText;
+
+  const clipboardIcon = `
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+    </svg>
+  `;
+
+  const checkIcon = `
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+    </svg>
+  `;
+
+  copyBtn.addEventListener("click", async () => {
+    await navigator.clipboard.writeText(codeBlock);
+
+    copyText.textContent = "Copied";
+    copyIcon.innerHTML = checkIcon;
+    tooltip.style.opacity = "1";
+
+    setTimeout(() => {
+      copyText.textContent = "Copy";
+      copyIcon.innerHTML = clipboardIcon;
+      tooltip.style.opacity = "0";
+    }, 2000);
+  });
+</script>
 
 <!-- Why You Need a Form Backend -->
 <section class="bg-gradient-to-b from-slate-800 to-slate-900 py-24">
@@ -331,5 +408,8 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
+
 </body>
 </html>
