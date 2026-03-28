@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Find Your Google Sheet ID (Simple Step-by-Step Guide)</title>
+
+  <meta name="description" content="Learn how to quickly find your Google Sheet ID for integrations, APIs, automations, and services like Fabform.io. Clear examples and screenshots included." />
+  <meta name="keywords" content="Google Sheet ID, find Google Sheet ID, Google Sheets tutorial, spreadsheet ID, Fabform Google Sheets, API Sheet ID" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-eUpUk2tYkw3NjxEftxVvm.js"></script>
+  <script>
+    window.plausible = window.plausible || function(){(plausible.q = plausible.q || []).push(arguments)};
+    plausible.init = plausible.init || function(i){plausible.o = i || {}};
+    plausible.init();
+  </script>
+</head>
+
+<body class="bg-slate-900 text-slate-100 antialiased">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <a href="/" class="flex-shrink-0 text-white font-extrabold text-2xl tracking-wide">
+        FabForm.io
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-6 text-white font-medium">
+        <a href="/pricing" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Pricing</a>
+        <a href="https://docs.fabform.io" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Documentation</a>
+        <a href="/contact" class="px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact Us</a>
+      </nav>
+
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="https://app.fabform.io/login"
+           class="px-5 py-2 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
+          Login
+        </a>
+        <a href="https://app.fabform.io/signup"
+           class="px-5 py-2 rounded-lg bg-pink-500 text-white font-semibold shadow hover:bg-pink-600 transition">
+          Sign Up
+        </a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-6 pb-6">
+    <nav class="space-y-4 text-white font-medium">
+      <a href="/pricing" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Pricing</a>
+      <a href="/contact" class="block px-3 py-2 rounded-lg hover:bg-white/10 transition">Contact Us</a>
+      <a href="https://app.fabform.io/login"
+         class="block px-5 py-2 rounded-lg bg-white text-indigo-700 font-semibold shadow hover:bg-indigo-100 transition">
+        Login
+      </a>
+      <a href="https://app.fabform.io/signup"
+         class="block px-5 py-2 rounded-lg bg-pink-500 text-white font-semibold shadow hover:bg-pink-600 transition">
+        Sign Up
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-6 py-16 space-y-16">
+
+  <section class="text-center">
+    <h1 class="text-4xl font-bold mb-4">How to Find Your Google Sheet ID</h1>
+    <p class="text-xl text-slate-300">A simple guide to locating your Google Sheet ID for APIs, automations, and Fabform.io integrations</p>
+  </section>
+
+  <!-- Step 1 -->
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">1. Open Your Google Sheet</h2>
+    <p class="mb-4 text-slate-300">Start by opening the Google Sheet you want to connect to an API or service.</p>
+
+    <p class="text-slate-300">Your browser URL will look something like this:</p>
+
+    <pre class="bg-slate-800 text-green-300 p-4 rounded mt-4 text-sm overflow-x-auto">
+https://docs.google.com/spreadsheets/d/1AbCDefGhijkLMNOPqrstuVWxyz1234567890/edit#gid=0
+    </pre>
+  </section>
+
+  <!-- Step 2 -->
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">2. Locate the Sheet ID in the URL</h2>
+    <p class="mb-4 text-slate-300">The Google Sheet ID is the long string of letters and numbers between <strong>/d/</strong> and <strong>/edit</strong>.</p>
+
+    <pre class="bg-slate-800 text-green-300 p-4 rounded text-sm overflow-x-auto">
+https://docs.google.com/spreadsheets/d/<strong>YOUR-SHEET-ID</strong>/edit#gid=0
+    </pre>
+
+    <p class="mt-4 text-slate-400">Example Sheet ID:</p>
+
+    <pre class="bg-slate-800 text-green-300 p-4 rounded text-sm overflow-x-auto">
+1AbCDefGhijkLMNOPqrstuVWxyz1234567890
+    </pre>
+  </section>
+
+  <!-- Step 3 -->
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">3. Copy the Google Sheet ID</h2>
+    <p class="text-slate-300">Highlight and copy the ID. This is what you’ll paste into your integration settings, API request, or Fabform.io configuration.</p>
+  </section>
+
+  <!-- Step 4 -->
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">4. Why You Need the Sheet ID</h2>
+    <p class="text-slate-300">Tools like Fabform.io use your Google Sheet ID to:</p>
+
+    <ul class="list-disc ml-6 space-y-2 text-slate-300">
+      <li>Send form submissions directly into your spreadsheet</li>
+      <li>Read or update data in specific tabs</li>
+      <li>Connect securely without full Google Drive access</li>
+    </ul>
+  </section>
+
+  <!-- Step 5 -->
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">5. Is It Safe to Share a Sheet ID?</h2>
+    <p class="text-slate-300">Yes — the Sheet ID alone does <strong>not</strong> grant access to your spreadsheet.  
+    Access is controlled by Google’s sharing permissions.</p>
+
+    <p class="mt-2 text-slate-400">Still, only share it with trusted services or teammates.</p>
+  </section>
+
+</main>
+
+<footer class="text-center py-8 text-slate-500">
+  Built with Tailwind CSS + Fabform.io
+</footer>
+
+</body>
+</html>
+

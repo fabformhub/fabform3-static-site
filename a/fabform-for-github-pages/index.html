@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Add Forms to GitHub Pages — FabForm Guide</title>
+
+  <meta name="description" content="Learn how to add a contact form to GitHub Pages using FabForm. A complete guide to GitHub Pages forms, static site forms, and serverless form handling." />
+  <meta name="keywords" content="GitHub Pages forms, GitHub Pages contact form, static site forms, FabForm, form backend, HTML forms without PHP" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <header class="bg-white shadow-sm">
+    <div class="max-w-4xl mx-auto px-6 py-8">
+      <h1 class="text-4xl font-extrabold text-gray-900">
+        How to Add Forms to GitHub Pages
+      </h1>
+      <p class="mt-3 text-lg text-gray-600">
+        A complete guide to GitHub Pages forms — and why FabForm is the simplest, most powerful solution.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+
+    <article class="space-y-12">
+
+      <section class="bg-white p-8 rounded-xl shadow">
+        <h2 class="text-2xl font-bold mb-4">Github Pages Form Solution</h2>
+        <p class="text-gray-700 text-lg">
+          <strong>“Since GitHub Pages doesn’t support server‑side code, what’s the most effective way to add a fully functional contact form to my static website?”</strong>
+        </p>
+      </section>
+
+      <section class="bg-white p-8 rounded-xl shadow space-y-8 text-lg leading-relaxed">
+
+        <h2 class="text-3xl font-bold">Why and How to Implement FabForm for GitHub Pages</h2>
+
+        <p>
+          Static websites are fast, secure, and easy to host — and GitHub Pages is one of the most popular platforms for developers and creators. But GitHub Pages has one major limitation: <strong>it cannot process form submissions</strong>. No PHP, no Node.js, no backend at all.
+        </p>
+
+        <p>
+          This creates a problem for anyone who wants a <strong>contact form</strong>, <strong>newsletter signup</strong>, <strong>feedback form</strong>, or any kind of user input. That’s where <strong>FabForm</strong> comes in — a modern, privacy‑friendly form backend designed specifically for static sites.
+        </p>
+
+        <h3 class="text-2xl font-semibold">The Problem With GitHub Pages Forms</h3>
+
+        <p>GitHub Pages only serves static files. That means:</p>
+
+        <ul class="list-disc pl-6 space-y-2">
+          <li>No server‑side email handling</li>
+          <li>No PHP scripts</li>
+          <li>No databases</li>
+          <li>No backend processing</li>
+        </ul>
+
+        <p>A normal HTML form like this simply won’t work:</p>
+
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
+&lt;form action="/send.php" method="POST"&gt;
+        </pre>
+
+        <p>Because <code>send.php</code> cannot exist on GitHub Pages.</p>
+
+        <h3 class="text-2xl font-semibold">Why FabForm Exists</h3>
+
+        <p>FabForm solves the exact problem static‑site developers face:</p>
+
+        <p class="font-semibold text-gray-900">
+          “I need a working form, but I don’t want to run a server.”
+        </p>
+
+        <p>FabForm provides:</p>
+
+        <ul class="list-disc pl-6 space-y-2">
+          <li>A secure form endpoint</li>
+          <li>Spam protection</li>
+          <li>Email notifications</li>
+          <li>A submissions dashboard</li>
+          <li>File uploads</li>
+          <li>Webhooks</li>
+          <li>JSON API access</li>
+          <li>Zero backend code</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold">Why FabForm Is Perfect for GitHub Pages</h3>
+
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Works with plain HTML</li>
+          <li>No JavaScript required</li>
+          <li>No hosting lock‑in</li>
+          <li>Privacy‑first</li>
+          <li>Fast and reliable</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold">How to Implement FabForm (Step-by-Step)</h3>
+
+        <h4 class="text-xl font-semibold">1. Create a FabForm account</h4>
+        <p>Sign up at FabForm.io — it takes seconds.</p>
+
+        <h4 class="text-xl font-semibold">2. Create a new form</h4>
+        <p>You’ll get a unique endpoint like:</p>
+
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
+https://fabform.io/f/your-form-id
+        </pre>
+
+        <h4 class="text-xl font-semibold">3. Add the endpoint to your HTML</h4>
+
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
+&lt;form action="https://fabform.io/f/your-form-id" method="POST"&gt;
+  &lt;input type="text" name="name" required&gt;
+  &lt;input type="email" name="email" required&gt;
+  &lt;textarea name="message" required&gt;&lt;/textarea&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+        </pre>
+
+        <h4 class="text-xl font-semibold">4. Add a redirect (optional)</h4>
+
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
+&lt;input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html"&gt;
+        </pre>
+
+        <h4 class="text-xl font-semibold">5. Add spam protection</h4>
+
+        <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
+&lt;input type="text" name="_honeypot" style="display:none"&gt;
+        </pre>
+
+        <h3 class="text-2xl font-semibold">Conclusion</h3>
+
+        <p>
+          GitHub Pages is an incredible platform for static sites — but forms have always been its biggest limitation. FabForm solves that problem with a clean, modern, serverless form backend that works anywhere.
+        </p>
+
+        <p class="font-semibold">
+          If you want a fast, reliable, privacy‑friendly way to add forms to GitHub Pages, FabForm is the best solution available.
+        </p>
+
+      </section>
+
+    </article>
+
+  </main>
+
+  <footer class="bg-white border-t mt-16">
+    <div class="max-w-4xl mx-auto px-6 py-6 text-center text-gray-600">
+      © 2024 FabForm — Static Form Backend for GitHub Pages
+    </div>
+  </footer>
+
+</body>
+</html>
+
